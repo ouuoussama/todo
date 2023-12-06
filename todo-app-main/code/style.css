@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Pixelify+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'josefin', sans-serif;
+    font-size: 18px;
+    
+}
+/*:root{
+ 
+
+    --Bright-Blue: hsl(220, 98%, 61%);
+    --Check-Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+   
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    --Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
+    --Light-Grayish-Blue:hsl(233, 11%, 84%);
+    --Dark-Grayish-Blue: hsl(236, 9%, 61%);
+    --Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+   
+    --Very-Dark-Blue: hsl(235, 21%, 11%);
+    --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+    --Light-Grayish-Blue: hsl(234, 39%, 85%);
+    --Light-Grayish-Blue (hover): hsl(236, 33%, 92%);
+    --Dark-Grayish-Blue: hsl(234, 11%, 52%);
+    --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+    --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+}*/
+body{
+    background-image: url("/images/bg-desktop-light.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: relative;
+}
+
+
+.content{   
+        width: 600px;
+        height: 600px;
+       /* background-color: white;*/
+        z-index: 1000;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 10%);
+}
+.Logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+    padding-top: 0;
+}
+.logo-text{
+    font-size: 46px;
+    letter-spacing: 20px;
+    font-weight: 700;
+    color: white;
+}
+.typing{
+   display: flex;
+   position: relative;
+}
+    .addtext>img{
+        position: absolute;
+        margin: 47px 25px;
+        right: 0;
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+    }
+    .addtext>img:hover{
+        width: 27px;
+        height: 27px;
+
+    }
+    .rectangle{
+        position: absolute;
+        display: inline-block;
+        width: 23px;
+        height: 23px;
+        z-index: 1000;
+        border: 1px solid rgb(171, 170, 170) ;
+        border-radius: 50%;
+        margin: 47px 25px;
+        cursor: pointer;
+        z-index: 10000;
+        background:hsl(0, 0%, 98%) /*linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));*/
+    }
+    .rectangle-one{
+        display: inline-block;
+        width: 23px;
+        height: 23px;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        margin: 0 25px;
+        z-index: 1000;
+        cursor: pointer;
+        background: hsl(0, 0%, 98%);
+        transition: 0.2s all;
+        border: 1px solid rgb(171, 170, 170);
+    }
+    .checkimg{
+        background-repeat: no-repeat;
+        display: none; /* Initially hide the checkimg */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1; /* Ensure the checkimg is above the background of rectangle-one */
+    }
+    .checkbox{
+        text-align: center;
+        transition: 0.2 ease-in-out;
+    }
+    .task{
+        display: flex;
+        justify-content: space-between;
+        padding: 18px 25px;
+        width: 100%;
+        background-color: hsl(0, 0%, 98%);
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+#typing-area{
+    width: 100%;
+    height: 70px;
+    background-color: hsl(0, 0%, 98%);
+    border: 2px solid transparent;
+    resize: none;
+    box-sizing: border-box;
+    border-radius: 8px;
+    
+    margin: 24px auto; 
+    padding: 22px 64px;
+    font-family: 'josefin', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    outline: none;
+    transition: all 0.2s;
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: 1px;
+}
+.typing-area{
+    width: 100%;
+    height: 70px;
+    background-color: hsl(0, 0%, 98%);
+   
+}
+#typing-area:focus{
+        cursor: text;
+        color: black;
+}
+
+.container{
+    width: 100%;
+    height: auto;
+    background-color: hsl(0, 0%, 98%); 
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    font-family: 'josefin', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    outline: none;
+    transition: all 0.2s;
+  /*  box-shadow: var(--Very-Light-Gray) 10px;*/
+}
+.todo-one{
+    display: flex;
+    /*margin: 24px auto; */
+    padding: 22px 64px;
+    border-bottom: 1.5px solid;
+}
+.cross{
+    right: 0;
+    position: absolute;
+    margin: 0 25px;
+    cursor: pointer;
+}
+
+.list > ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+.list > ul > li {
+    font-size: 14px;
+    padding: 0 10px;
+    color: hsl(236, 9%, 61%);
+    cursor: pointer;
+    font-weight: 400;
+    transition: color 0.2s ease-in-out;
+}
+
+.list > ul > li:hover{
+    color: hsl(235, 21%, 11%);
+}
+.clear {
+    color: hsl(236, 9%, 61%);
+    transition: color 0.2s ease-in-out;
+    cursor: pointer;
+    
+}
+.zamltxt{
+    font-size: 14px;
+    font-weight: 400;
+}
+.clear:hover {
+    color: hsl(235, 21%, 11%);
+}
+.textchange{
+    transition: 0.2s ease-in-out;
+}
+.todo-two {
+   
+}
+
+.todo-two .noitem {
+    text-align: center;
+    padding: 40px 64px;
+    border-bottom: 1.5px solid;
+}
+.todo-one.hidden {
+    display: none;
+}
